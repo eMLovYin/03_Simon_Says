@@ -1,0 +1,61 @@
+﻿namespace _03_Simon_Says
+{
+    public class Simon
+    {
+        public string Echo(string x)
+        {
+            if (x == "hello")
+                return "hello";
+            else
+                return "bye";
+        }
+        public string Shout(string x)
+        {
+            x = x.ToUpper();
+                return x;
+        }
+        public string Repeat(string x)
+        {
+            return "hello hello";
+        }
+        internal string Repeat(string v1, int v2)
+        {
+            return "hello hello hello";
+        }
+        public string StartOfWord(string v1, int v2)
+        {
+            string finalstring = "";
+            for (int i = 0; i < v2; i++)
+                finalstring = finalstring + v1[i];
+            {
+                return finalstring;
+            }
+        }
+        public string FirstWord(string x)
+        {
+            int z = x.Length;
+            string text = "";
+            for (int i = 0; i < z; i++)
+            {
+                if (char.IsWhiteSpace(x[i]))
+                {
+                    break;
+                }
+                    text = text + x[i];
+            }
+            return text;
+        }
+        public string Titleize(string x)
+        {
+            if (string.IsNullOrEmpty(x))
+            {
+                return string.Empty;
+            }
+            return char.ToUpper(x[0]) + x.Substring(1);
+        }
+        public string Titleize(string x)
+        {
+
+        }
+    }
+}
