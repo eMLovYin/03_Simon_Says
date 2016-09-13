@@ -68,11 +68,5 @@
             }
             return text;
         }
-
-        //I feed the StringBuilder with the string
-        //and use that instance afterwards to replace
-        //the required chars to upper
-
-
     }
 }
