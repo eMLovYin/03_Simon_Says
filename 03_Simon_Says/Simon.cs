@@ -45,17 +45,34 @@
             }
             return text;
         }
-        public string Titleize(string x)
+       public string Titleize(string x)
         {
-            if (string.IsNullOrEmpty(x))
+            string text = "";
+            text = text + char.ToUpper(x[0]);
+            string test = "";
+            for (int i = 1; i < x.Length; i++)
             {
-                return string.Empty;
+                if (i != x.Length - 1)
+                {
+                    test = "" + x[i + 1];
+                }
+                if (char.IsWhiteSpace(x[i]) && test != "a" && test != "o" && test != "t")
+                {
+                    text = text + " " + char.ToUpper(x[i + 1]);
+                    i++;
+                }
+                else
+                {
+                    text = text + x[i];
+                }
             }
-            return char.ToUpper(x[0]) + x.Substring(1);
+            return text;
         }
-        public string Titleize(string x)
-        {
 
-        }
+        //I feed the StringBuilder with the string
+        //and use that instance afterwards to replace
+        //the required chars to upper
+
+
     }
 }
